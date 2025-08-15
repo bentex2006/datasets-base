@@ -1,0 +1,50 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+out/
+
+# Vite cache
+.vite/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# GitHub Codespaces / VSCode
+.vscode/
+.history/
+*.code-workspace
+
+# Python cache if used
+__pycache__/
+*.py[cod]
+
+# Nix / render / deployment caches
+.cache/
+.nix/
+.bun/
+
+# Misc
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Hugging Face dataset cache
+*.arrow
