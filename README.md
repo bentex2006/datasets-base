@@ -1,6 +1,6 @@
 
 <p align="center">
-	<img src="docs/banner.png" alt="LLM Dataset Hub Banner" width="80%"/>
+	<img src="docs/banner.jpg" alt="LLM Dataset Hub Banner" width="80%"/>
 </p>
 
 # 🚀 LLM Fine-tuning Dataset Hub
