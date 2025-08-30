@@ -1,0 +1,3 @@
+{"instruction": "Translate the following English text to French", "input": "Hello, how are you today?", "output": "Bonjour, comment allez-vous aujourd'hui?"}
+{"instruction": "Write a short poem about nature", "input": "Theme: Spring flowers", "output": "Petals dancing in the breeze,\nColors bursting through the trees,\nSpring awakens day by day,\nAs nature's beauty finds its way."}
+{"instruction": "Explain this scientific concept", "input": "What is photosynthesis?", "output": "Photosynthesis is the process by which plants convert sunlight into energy. Plants use sunlight, water, and carbon dioxide to create glucose and oxygen. This process is essential for life on Earth as it provides food for plants and oxygen for many organisms."}
