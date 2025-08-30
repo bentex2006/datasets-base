@@ -10,9 +10,10 @@
 	<a href="#license"><img src="https://img.shields.io/badge/License-Apache%202.0-blue"/></a>
 	<a href="#contributing"><img src="https://img.shields.io/badge/Contributions-Welcome-orange"/></a>
 	<a href="#supported-models"><img src="https://img.shields.io/badge/Models-Mistral%2C%20Pi%2C%20Gemini%2C%20Distilled-purple"/></a>
+	<a href="#dialogue-support"><img src="https://img.shields.io/badge/Dialogue-Supported-success"/></a>
 </div>
 
-A professional, extensible dataset collection and preprocessing pipeline for fine-tuning Large Language Models (LLMs) using efficient techniques like QLoRA (Quantized Low-Rank Adaptation), model distillation, and advanced validation.
+A professional, extensible dataset collection and preprocessing pipeline for fine-tuning Large Language Models (LLMs) using efficient techniques like QLoRA (Quantized Low-Rank Adaptation), Axolotl, model distillation, and advanced validation. Now with comprehensive dialogue model support!
 
 ## 🎯 Supported Models
 
@@ -28,22 +29,51 @@ A professional, extensible dataset collection and preprocessing pipeline for fin
 ```text
 datasets-base/
 ├── data/                # Dataset storage
-│   ├── raw/             # Original, unprocessed datasets
-│   └── processed/       # Cleaned and formatted datasets
-├── scripts/             # Processing utilities
-├── notebooks/           # Interactive examples and training workflows
-├── docs/                # Detailed documentation and guidelines
-└── config/              # Model configurations
+│   ├── raw/            # Original, unprocessed datasets
+│   └── processed/      # Cleaned and formatted datasets
+├── scripts/            # Processing utilities
+│   ├── preprocessing/  # Data processing scripts
+│   ├── training/       # Training utilities
+│   └── validation/     # Data validation tools
+├── notebooks/          # Interactive examples and training workflows
+│   ├── 1_dataset_preparation.ipynb        # Dataset preprocessing
+│   ├── 2_qlora_training.ipynb            # Basic QLoRA training
+│   ├── 3_qlora_dialogue_training.ipynb   # Dialogue-specific QLoRA
+│   └── 4_axolotl_dialogue_training.ipynb # Axolotl implementation
+├── docs/              # Detailed documentation and guidelines
+└── config/            # Model and training configurations
+    └── model_configs/ # Model-specific settings
 ```
 
 ## 🛠️ Key Features
 
-- <strong>Efficient Data Preprocessing Pipeline</strong>: Clean, validate, and format datasets for multiple LLM architectures.
-- <strong>QLoRA-Ready Dataset Formatting</strong>: Prepare data for quantized low-rank adaptation.
-- <strong>Model-Specific Data Transformations</strong>: Support for Mistral, Pi, Gemini, and custom models.
-- <strong>Advanced Validation & Quality Checks</strong>: Automated tools for data integrity and quality scoring.
-- <strong>Distillation-Ready Preparation</strong>: Easily create teacher-student datasets for model distillation.
-- <strong>Cross-Platform Notebooks</strong>: Ready-to-use Jupyter notebooks for Colab, Kaggle, and local environments.
+- <strong>Advanced Dialogue Support</strong>
+  - Multi-turn conversation handling
+  - Context window management
+  - Proper dialogue formatting
+  - Chat template support
+
+- <strong>Dual Training Approaches</strong>
+  - QLoRA Implementation
+    - 4-bit quantization
+    - Memory-efficient training
+    - Parameter-efficient fine-tuning
+  - Axolotl Integration
+    - Simplified dialogue handling
+    - Flash Attention 2 support
+    - Automatic optimization
+
+- <strong>Data Processing</strong>
+  - Efficient preprocessing pipeline
+  - Model-specific transformations
+  - Advanced validation & quality checks
+  - Dialogue-aware formatting
+
+- <strong>Training Features</strong>
+  - Cross-platform compatibility (Colab/Kaggle/Local)
+  - Memory optimization techniques
+  - Automated checkpointing
+  - Progress tracking
 
 ## 🚀 Getting Started
 
@@ -52,11 +82,17 @@ datasets-base/
 	git clone https://github.com/bentex2006/datasets-base.git
 	cd datasets-base
 	```
+
 2. <strong>Install dependencies</strong>
 	```bash
 	pip install -r requirements.txt
 	```
-3. <strong>Follow setup instructions</strong>
+
+3. <strong>Choose your training approach</strong>
+   - For manual QLoRA: Use `notebooks/3_qlora_dialogue_training.ipynb`
+   - For Axolotl: Use `notebooks/4_axolotl_dialogue_training.ipynb`
+
+4. <strong>Follow setup instructions</strong>
 	See `docs/setup.md` for environment-specific details.
 
 ## 📚 Documentation
@@ -65,6 +101,20 @@ datasets-base/
 - <strong>[Preprocessing Guidelines](docs/preprocessing.md)</strong>
 - <strong>[Model-specific Instructions](docs/models.md)</strong>
 - <strong>[Contributing Guidelines](docs/CONTRIBUTING.md)</strong>
+
+## 🎯 Training Approaches
+
+### QLoRA Implementation
+- 4-bit quantization for memory efficiency
+- Low-rank adaptation for parameter efficiency
+- Custom dialogue dataset handling
+- Proper context management
+
+### Axolotl Integration
+- Simplified dialogue fine-tuning
+- Built-in optimization techniques
+- Flash Attention 2 support
+- Efficient training configurations
 
 ## 📊 Dataset Statistics
 
